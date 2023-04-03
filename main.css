@@ -1,0 +1,37 @@
+body {
+    background-color: darkseagreen;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+}
+
+header {
+    background-color: white; 
+    color: black; 
+    padding: 10px; 
+    font-size: 16pt;
+}
+
+footer {
+    background-color: white; 
+    color: black; 
+    padding: 20px; 
+    font-size: 18px; 
+    text-align: right;
+}
+
+h1 {
+    text-align: center; 
+    font-style: italic;
+}
+
+li {
+    color: darkgreen; 
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none; 
+    color: darkgreen; 
+    font-size: 20px;
+}
