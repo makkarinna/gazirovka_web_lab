@@ -35,3 +35,19 @@ a {
     color: darkgreen; 
     font-size: 20px;
 }
+
+a:visited {
+    color:darkgreen;
+}
+
+a:hover {
+    color:chartreuse;
+    text-decoration: underline;
+    background-color: azure;
+    font-weight: bold;
+}
+
+a:active {
+    color: firebrick;
+    background-color:darkseagreen;
+}
