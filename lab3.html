@@ -40,15 +40,30 @@
             margin-left: 2cm;
             text-indent: 0;
         }
-    </style>
-</head>
+
+        .shadow {
+            text-shadow: 5px 5px 2px grey;
+        }
+        .shadow1 {
+            text-shadow: -0px 0px 3px blue;
+        }
+
+        .rach {
+            transition: 600ms 0.5s;
+        }
+        .rach:hover{
+            opacity: 1;
+            text-shadow: 5px 5px 2px grey;
+        }
+</style>
+        
 <body>
     <header>
         НГТУ, ФБ, Лабораторная работа 3
     </header>
 
     <main>
-        <h1>Расчет (формула)</h1>
+        <h1 class="rach">Расчет (формула)</h1>
 
        <div>Расчет сводится к определению разницы между активами и пассивами
         (обязательствами), которые определяются следующим образом.</div>
@@ -99,6 +114,9 @@
 
         <div class="formula">
             Чистые активы = стр.1300 - ЗУ + ДБП</div>
+        
+            <div class="shadow">Тень</div>
+            <div class="shadow1">Синяя тень</div>
     </main>
 
     <footer>
