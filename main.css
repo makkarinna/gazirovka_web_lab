@@ -12,12 +12,22 @@ header {
     font-size: 16pt;
 }
 
+header:hover {
+    font-size: 21pt;
+    color:darkgreen;
+}
+
 footer {
     background: linear-gradient(to top, white, darkseagreen);
     color: black; 
     padding: 20px; 
     font-size: 18px; 
     text-align: right;
+}
+
+footer:hover {
+    font-size: 23px;
+    color: darkgreen;
 }
 
 h1 {
@@ -34,6 +44,9 @@ a {
     text-decoration: none; 
     color: darkgreen; 
     font-size: 20px;
+    transition-duration:1s, 1s, 1s ;
+    transition-property: background-color, color, text-shadow;
+    
 }
 
 a:visited {
@@ -41,10 +54,12 @@ a:visited {
 }
 
 a:hover {
-    color:chartreuse;
-    text-decoration: underline;
+    color:black;
     background-color: azure;
     font-weight: bold;
+    text-shadow: 5px 5px 2px grey;
+    transition-duration: 0.3s
+    
 }
 
 a:active {
