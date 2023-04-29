@@ -17,6 +17,10 @@ header:hover {
     color:darkgreen;
 }
 
+main {
+    margin: 10px 20px;
+}
+
 footer {
     background: linear-gradient(to top, white, darkseagreen);
     color: black; 
