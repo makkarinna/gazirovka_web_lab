@@ -47,6 +47,19 @@
             let author = 'Здравствуйте, поставьте 5 баллов :) \nАвтор страницы: \nМахмад Карина Абдуловна';
             alert(author)
         }  
+        function changeOutput(buttonNum, backColor, textColor, borderWidth, borderColor) {
+            let output = document.getElementById('output');
+            output.innerHTML = 'Нажата кнопка ' + buttonNum;
+            output.style.backgroundColor = backColor;
+            output.style.color = textColor;
+            output.style.borderWidth = borderWidth;
+            output.style.borderColor = borderColor;
+
+
+        }
+           
+            
+        
 
     </script>
     <style>
@@ -60,6 +73,11 @@
             border: 2px solid green;
             text-align: center;
             
+        }
+        #output {
+            border: 1px solid;
+            width: 300px;
+            height: 40px;
         }
     </style>
 </head>
@@ -76,6 +94,15 @@
         <div class="message"  onclick="Proizvedenie()">Найти произведение чисел</div>
         <div class="message" onclick="Delenie()">Результат деление чисел</div>
         <div class="message" onclick="showAutor()">Узнать кто автор страницы</div>
+
+        <div>
+            <input type="button" value="Кнопка 1" onclick="changeOutput(1, 'yellow', 'blue', '5px', 'blue')">
+            <input type="button" value="Кнопка 2" onclick="changeOutput(2, 'purple', 'white', '5px', 'white')">
+            <input type="button" value="Кнопка 3" onclick="changeOutput(3, 'green', 'red','5px', 'red')">
+            <input type="button" value="Кнопка 4" onclick="changeOutput(4, 'red', 'black','5px', 'black')">
+        </div>
+
+        <div id="output"></div>
     </main>
 
     <footer onclick="showAutor()">
