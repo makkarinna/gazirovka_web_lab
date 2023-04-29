@@ -12,7 +12,11 @@
             let b = 7891;
             let result = a + b;
             alert('Сумма ' + a + ' и ' + b + ' равна ' + result);
-        }    
+        }  
+        function showAutor() {
+            let author = 'Здравствуйте, поставьте 5 баллов :) \nАвтор страницы: \nМахмад Карина Абдуловна';
+            alert(author)
+        }  
 
     </script>
     <style>
@@ -36,10 +40,10 @@
     
     <main>
         <div class="message" onclick="showSum()">Сколько будет 5154+7891?</div>
-        <div class="message">Узнать кто автор страницы</div>
+        <div class="message" onclick="showAutor()">Узнать кто автор страницы</div>
     </main>
 
-    <footer>
+    <footer onclick="showAutor()">
         &copy; Махмад Карина Абдуловна, ФБИ-14, 2 курс, 2023
     </footer>
 </body>
