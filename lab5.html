@@ -16,6 +16,33 @@
             let result = a + b;
             alert('Сумма ' + a + ' и ' + b + ' равна ' + result);
         }  
+        function Raznoct() {
+            let inputA = document.getElementById('numberA');
+            let inputB = document.getElementById('numberB');
+
+            let a = parseInt(inputA.value);
+            let b = parseInt(inputB.value);
+            let result = a - b;
+            alert('Сумма ' + a + ' и ' + b + ' равна ' + result);
+        }
+        function Proizvedenie() {
+            let inputA = document.getElementById('numberA');
+            let inputB = document.getElementById('numberB');
+
+            let a = parseInt(inputA.value);
+            let b = parseInt(inputB.value);
+            let result = a * b;
+            alert('Сумма ' + a + ' и ' + b + ' равна ' + result);
+        }
+        function Delenie() {
+            let inputA = document.getElementById('numberA');
+            let inputB = document.getElementById('numberB');
+
+            let a = parseInt(inputA.value);
+            let b = parseInt(inputB.value);
+            let result = a / b;
+            alert('Сумма ' + a + ' и ' + b + ' равна ' + result);
+        }
         function showAutor() {
             let author = 'Здравствуйте, поставьте 5 баллов :) \nАвтор страницы: \nМахмад Карина Абдуловна';
             alert(author)
@@ -45,6 +72,9 @@
         <label>Первое число: <input type="number" value="5154" id="numberA"></label><br>
         <label>Второе число: <input type="number" value="7891" id="numberB"></label><br>
         <div class="message" onclick="showSum()">Найти сумму чисел</div>
+        <div class="message" onclick="Raznoct()">Найти разность чисел</div>
+        <div class="message"  onclick="Proizvedenie()">Найти произведение чисел</div>
+        <div class="message" onclick="Delenie()">Результат деление чисел</div>
         <div class="message" onclick="showAutor()">Узнать кто автор страницы</div>
     </main>
 
