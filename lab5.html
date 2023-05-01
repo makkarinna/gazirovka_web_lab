@@ -79,9 +79,13 @@
             output.innerHTML = 'Общая стоимость: ' + result + ' руб.';
 
         }
-        
-            
-        
+   
+
+        function Click(circle) {
+            circle.style.display = 'none';
+        }
+       
+      
 
     </script>
     <style>
@@ -101,6 +105,137 @@
             border: 1px solid;
             width: 300px;
             height: 40px;
+        }
+
+        .one {
+            border-radius: 50%;
+            display: inline-block;
+            border: 0px solid;
+            background-color: aqua; 
+            width: 50px; height: 50px; 
+            text-align: center; 
+            font-size: 20px; 
+            line-height: 50px; 
+            margin-top: 20px; 
+            transition: 1s; 
+            color: royalblue;
+        }
+        .two {
+            border-radius: 50%;
+            display: inline-block;
+            border: 0px solid;
+            background-color: aquamarine; 
+            width: 50px; height: 50px; 
+            text-align: center; 
+            font-size: 20px; 
+            line-height: 50px; 
+            margin-top: 20px; 
+            transition: 1s; 
+            color: royalblue;
+        }
+        .three {
+            border-radius: 50%;
+            display: inline-block;
+            border: 0px solid;
+            background-color: azure; 
+            width: 50px; height: 50px; 
+            text-align: center; 
+            font-size: 20px; 
+            line-height: 50px; 
+            margin-top: 20px; 
+            transition: 1s; 
+            color: royalblue;
+        }
+        .four {
+            border-radius: 50%;
+            display: inline-block;
+            border: 0px solid;
+            background-color: beige; 
+            width: 50px; height: 50px; 
+            text-align: center; 
+            font-size: 20px; 
+            line-height: 50px; 
+            margin-top: 20px; 
+            transition: 1s; 
+            color: royalblue;
+        }
+        .five {
+            border-radius: 50%;
+            display: inline-block;
+            border: 0px solid;
+            background-color: bisque; 
+            width: 50px; height: 50px; 
+            text-align: center; 
+            font-size: 20px; 
+            line-height: 50px; 
+            margin-top: 20px; 
+            transition: 1s; 
+            color: royalblue;
+        }
+        .six {
+            border-radius: 50%;
+            display: inline-block;
+            border: 0px solid;
+            background-color: burlywood; 
+            width: 50px; height: 50px; 
+            text-align: center; 
+            font-size: 20px; 
+            line-height: 50px; 
+            margin-top: 20px; 
+            transition: 1s; 
+            color: royalblue;
+        }
+        .seven {
+            border-radius: 50%;
+            display: inline-block;
+            border: 0px solid;
+            background-color: cadetblue; 
+            width: 50px; height: 50px; 
+            text-align: center; 
+            font-size: 20px; 
+            line-height: 50px; 
+            margin-top: 20px; 
+            transition: 1s; 
+            color: royalblue;
+        }
+        .edge {
+            border-radius: 50%;
+            display: inline-block;
+            border: 0px solid;
+            background-color: chocolate; 
+            width: 50px; height: 50px; 
+            text-align: center; 
+            font-size: 20px; 
+            line-height: 50px; 
+            margin-top: 20px; 
+            transition: 1s; 
+            color: royalblue;
+        }
+        .nine {
+            border-radius: 50%;
+            display: inline-block;
+            border: 0px solid;
+            background-color: deepskyblue; 
+            width: 50px; height: 50px; 
+            text-align: center; 
+            font-size: 20px; 
+            line-height: 50px; 
+            margin-top: 20px; 
+            transition: 1s; 
+            color: royalblue;
+        }
+        .ten {
+            border-radius: 50%;
+            display: inline-block;
+            border: 0px solid;
+            background-color: darksalmon; 
+            width: 50px; height: 50px; 
+            text-align: center; 
+            font-size: 20px; 
+            line-height: 50px; 
+            margin-top: 20px; 
+            transition: 1s; 
+            color: royalblue;
         }
     </style>
 </head>
@@ -138,6 +273,16 @@
             <input style="margin-left: 50px;" type="button" value="Рассчитать" onclick="Tovar()">
             <div style="margin-left: 50px;" id="resultat">Общая стоимость:</div>
         </div>
+        <div class="one" onclick="Click(this)">1</div>
+        <div class="two" onclick="Click(this)">2</div>
+        <div class="three" onclick="Click(this)">3</div>
+        <div class="four" onclick="Click(this)">4</div>
+        <div class="five" onclick="Click(this)">5</div>
+        <div class="six" onclick="Click(this)">6</div>
+        <div class="seven" onclick="Click(this)">7</div>
+        <div class="edge" onclick="Click(this)">8</div>
+        <div class="nine" onclick="Click(this)">9</div>
+        <div class="ten" onclick="Click(this)">10</div>
 
     </main>
 
