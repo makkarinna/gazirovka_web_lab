@@ -58,6 +58,28 @@
 
         }
            
+        function Tovar() {
+            let inputY = document.getElementById('numberY');
+            let inputG = document.getElementById('numberG');
+            let inputAp = document.getElementById('numberAp');
+            let inputD = document.getElementById('numberD');
+
+            var priceY = 100;
+            var priceG = 80;
+            var priceAp = 150;
+            var priceD = 300;
+
+            let y = parseInt(inputY.value) * priceY;
+            let g = parseInt(inputG.value) * priceG;
+            let ap = parseInt(inputAp.value) * priceAp;
+            let d = parseInt(inputD.value) * priceD;
+
+            let result = y + g + ap + d;
+            let output = document.getElementById('resultat');
+            output.innerHTML = 'Общая стоимость: ' + result + ' руб.';
+
+        }
+        
             
         
 
@@ -72,6 +94,7 @@
             background-color: antiquewhite;
             border: 2px solid green;
             text-align: center;
+            margin-top: 20px;
             
         }
         #output {
@@ -87,22 +110,35 @@
     </header>
     
     <main>
-        <label>Первое число: <input type="number" value="5154" id="numberA"></label><br>
-        <label>Второе число: <input type="number" value="7891" id="numberB"></label><br>
+        <label style="color: green;"><b>Первое число: </b><input type="number" value="5154" id="numberA"></label><br>
+        <label style="color: green;"><b>Второе число: </b><input style="margin-top: 10px;" type="number" value="7891" id="numberB"></label><br>
         <div class="message" onclick="showSum()">Найти сумму чисел</div>
         <div class="message" onclick="Raznoct()">Найти разность чисел</div>
         <div class="message"  onclick="Proizvedenie()">Найти произведение чисел</div>
         <div class="message" onclick="Delenie()">Результат деление чисел</div>
         <div class="message" onclick="showAutor()">Узнать кто автор страницы</div>
 
-        <div>
-            <input type="button" value="Кнопка 1" onclick="changeOutput(1, 'yellow', 'blue', '5px', 'blue')">
-            <input type="button" value="Кнопка 2" onclick="changeOutput(2, 'purple', 'white', '5px', 'white')">
-            <input type="button" value="Кнопка 3" onclick="changeOutput(3, 'green', 'red','5px', 'red')">
-            <input type="button" value="Кнопка 4" onclick="changeOutput(4, 'red', 'black','5px', 'black')">
+        <div style="margin-top: 20px;">
+            <input style="background-color: cornflowerblue;" type="button" value="Кнопка 1" onclick="changeOutput(1, 'yellow', 'blue', '5px', 'blue')">
+            <input style="background-color: cornflowerblue;" type="button" value="Кнопка 2" onclick="changeOutput(2, 'purple', 'white', '5px', 'white')">
+            <input style="background-color: cornflowerblue;" type="button" value="Кнопка 3" onclick="changeOutput(3, 'green', 'red','5px', 'red')">
+            <input style="background-color: cornflowerblue;" type="button" value="Кнопка 4" onclick="changeOutput(4, 'red', 'purple','5px', 'purple')">
         </div>
 
-        <div id="output"></div>
+        <div style="margin-top: 15px;" id="output"></div>
+
+        <div style="border: solid; margin-left: 100px; margin-right: 300px; width: 350px; color: royalblue; border-radius: 10px; margin-top: 10px;">
+            <div style="margin-left: 50px; font-size: 20px; color: royalblue; "><b>Корзина товаров</b></div><br>
+
+            <label style="margin-left: 50px;">Яблоки(100р/шт):<div><input style="margin-left: 50px;" type="number" value="3" id="numberY"></div></label><br>
+            <label style="margin-left: 50px;">Груши(80р/шт):<div><input style="margin-left: 50px;" type="number" value="8" id="numberG"></div></label><br>
+            <label style="margin-left: 50px;">Апельсины(150р/шт):<div><input style="margin-left: 50px;" type="number" value="4" id="numberAp"></div></label><br>
+            <label style="margin-left: 50px;">Дыни(300р/шт):<div><input style="margin-left: 50px;" type="number" value="1" id="numberD"></div></label><br>
+            
+            <input style="margin-left: 50px;" type="button" value="Рассчитать" onclick="Tovar()">
+            <div style="margin-left: 50px;" id="resultat">Общая стоимость:</div>
+        </div>
+
     </main>
 
     <footer onclick="showAutor()">
@@ -110,3 +146,4 @@
     </footer>
 </body>
 </html>
+
