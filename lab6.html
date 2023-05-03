@@ -6,18 +6,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Махмад Карина Абдуловна</title>
     <link rel="stylesheet" href="main.css">
+    <style>
+        .game {
+            border: 2px solid;
+            border-radius: 10px;
+            margin: 20px auto;
+            width: 700px;
+           
+        }
+        
+
+    </style>
+    <script>
+        let number;
+        let count = 1;
+        function startGame() {
+            number = Math.floor( Math.random() * 100) + 1;
+            let screens = document.getElementsByClassName('game');
+            console.log(number);
+            screens[0].style.display = 'none';
+            screens[1].style.display = 'block'; 
+        }
+        function guess() {
+            count++;
+            let input = document.getElementById('user-number');
+            let userNumber = parseInt(input.value);
+            let message = document.getElementById('result')
+            if(userNumber > number){
+                message.innerHTML = 'Вы ввели слишком большое число';
+            }
+            else if (userNumber < number) {
+                message.innerHTML = 'Вы ввели слишком маленькое число';
+            }
+            else {
+                let screens = document.getElementsByClassName('game');
+                screens[1].style.display = 'none';
+                screens[2].style.display = 'block';
+                document.getElementById('number').innerHTML = number;
+                document.getElementById('try-count').innerHTML = count;
+            }
+
+        }
+        function again() {
+            let screens = document.getElementsByClassName('game');
+            screens[2].style.display = 'none';
+            screens[1].style.display = 'block';
+            count = 0;
+            startGame()
+        }
+
+    </script>
 </head>
 <body>
     <header>
-        НГТУ, ФБ, Лабораторная работа 6,
+        НГТУ, ФБ, Лабораторная работа 6
     </header>
 
     <main>
+        <div class="game">
+            <button onclick="startGame()" style="margin-top: 10px; margin-bottom: 10px;margin-left: 300px;">
+                Сыграть в игру
+            </button>
+        </div>
 
+        <div class="game" style="display: none;">
+            <h1>Угадай число!</h1>
+            <div style="text-align: center ;">
+                Задумано число от 1 до 100. Угадайте, какое?<br>
+                <input style="width: 200px;" type="number" value="" min="1" max="100" id="user-number"><br>
+                <button onclick="guess()" style="margin-bottom: 10px;">Угадать</button>
+                <div id="result"></div>
+            </div>
+        </div>
+        <div class="game" style="display: none;">
+            <h1>Поздравляем, вы выиграли!</h1>
+            <div style="text-align: center;">
+                Задуманное число: <span id="number"></span>
+            </div>
+            <div style="text-align: center;">
+                Количество попыток: <span id="try-count"></span>
+            </div>
+            <div style="text-align: center; margin-bottom: 10px;">
+                <button onclick="again()">Сыграть еще раз</button> 
+            </div>
+        </div>
     </main>
     
     <footer>
-        &copy; Махмад Карина Абдуловна, Фби-14, 2 курс, 2023 
+        &copy; Махмад Карина Абдуловна, ФБИ-14, 2 курс, 2023 
     </footer>
 </body>
 </html>
