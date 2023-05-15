@@ -19,6 +19,18 @@
             font-size: 17px;
             color: cornflowerblue;
         }
+        .color {
+            border: 1px solid;
+            border-color: black;
+            border-radius: 3px 3px;
+            margin: auto;
+            padding: 10px; 
+            width: 25%;
+            background-color: yellow;
+            color: black;
+            text-align: center;
+            
+        }
         
 
     </style>
@@ -70,6 +82,33 @@
             document.getElementById("hide-rules-btn").style.display = "none";
 
             document.getElementById("rules").style.display = "none";
+        }
+        function changeColor(div) {
+            if(div.style.backgroundColor == 'yellow') {
+                div.style.backgroundColor = 'red';
+                document.getElementById('color-name').innerHTML = 'красный';
+                div.style.color = 'white';
+            }
+            else if (div.style.backgroundColor == 'red') {
+                div.style.backgroundColor = 'black';
+                document.getElementById('color-name').innerHTML = 'черный';
+                div.style.color = 'white';
+            }
+            else if (div.style.backgroundColor == 'black') {
+                div.style.backgroundColor = 'white';
+                document.getElementById('color-name').innerHTML = 'белый';
+                div.style.color = 'pink';
+                
+            }
+            else if (div.style.backgroundColor == 'white') {
+                div.style.backgroundColor = 'pink';
+                document.getElementById('color-name').innerHTML = 'розовый';
+                div.style.color = 'black';
+            }
+            else {
+                div.style.backgroundColor = 'yellow';
+                document.getElementById('color-name').innerHTML = 'желтый';
+            }
         }
 
     </script>
@@ -125,10 +164,14 @@
                     <li class="pravila">Если вы выиграли, то на экране появится поздравление.</li>
                     <li class="pravila">Для того чтобы сыграть еще, нажмите на соответсвующую кнопку.<div class=""></div></li>
                 </ol>
-              
-                
-            
+            </div>
         </div>
+
+        <div class="color" ondblclick="changeColor(this)">
+            Цвет: <span id="color-name">желтый</span><br>
+            Сделайте двойной щелчок, чтобы сменить.
+        </div>
+
     </main>
     
     <footer>
