@@ -49,6 +49,20 @@
             left: 10px;
 
         }
+        .rach {
+            border: 0px solid;
+            border-radius: 20px;
+            padding: 20px; 
+            width: 100px;
+            height: 30px;
+            background-color: greenyellow;
+            color: green;
+            text-align: center;
+            cursor: pointer;
+            margin-left: 10px;
+            margin-top: 10px;
+            box-shadow: 1px 2px;
+        }
         
 
     </style>
@@ -139,7 +153,17 @@
                 check.style.left = '10px';
                 check.style.transform = 'rotate(4turn)';
                 Move=false;
+            }    
+        }
+        function resizeBlock() {
+            var block = document.querySelector('.rach');
+            var width = block.offsetWidth;
+            if (width < 1000) {
+                width += 50;
+            } else {
+                width = 100;
             }
+            block.style.width = width + 'px'
         }
 
     </script>
@@ -205,6 +229,9 @@
 
         <div class="check" onclick="moveBlock(this)">
             Щелкни меня
+        </div>
+        <div class="rach" onclick="resizeBlock()">
+            Расширь меня 
         </div>
 
     </main>
