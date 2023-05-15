@@ -12,7 +12,12 @@
             border-radius: 10px;
             margin: 20px auto;
             width: 700px;
+            color: cornflowerblue;
            
+        }
+        .pravila {
+            font-size: 17px;
+            color: cornflowerblue;
         }
         
 
@@ -54,6 +59,18 @@
             count = 0;
             startGame()
         }
+        function hideButton() {
+            document.getElementById("show-rules-btn").style.display = "none";
+            document.getElementById("hide-rules-btn").style.display = "block";
+
+            document.getElementById("rules").style.display = "block";
+        }
+        function showButton() {
+            document.getElementById("show-rules-btn").style.display = "block";
+            document.getElementById("hide-rules-btn").style.display = "none";
+
+            document.getElementById("rules").style.display = "none";
+        }
 
     </script>
 </head>
@@ -89,6 +106,28 @@
             <div style="text-align: center; margin-bottom: 10px;">
                 <button onclick="again()">Сыграть еще раз</button> 
             </div>
+        </div>
+    
+        <div>
+            <div class="game" >
+                <button id="show-rules-btn" onclick="hideButton()" style="margin: 10px; margin-bottom: 10px; margin-left: 10px;">Показать правила игры</button>
+                <button id="hide-rules-btn" onclick="showButton()" style="display: none; margin: 10px; margin-bottom: 10px; margin-left: 10px;">Скрыть правила игры</button>
+            
+            <div id="rules" style="display: none;">
+                <h1 style="font-size: 20px; text-align: left; margin-left: 10px;">Правила игры</h1>
+                <ol>
+                    <li class="pravila">Чтобы начать игру, вам нужно нажать на кнопку "сыграть в игру"</li>
+                    <li class="pravila">После того, как вы нажмете на кнопку, у вас откроется полное окно игры, где вам следует выбрать число от 1 до 100.</li>
+                    <li class="pravila">Есть специальное окошечко, куда вы можете писать число, для того, чтобы угадать его.</li>
+                    <li class="pravila">После того, как вы напишите число, нажмите на кнопку "угадать", чтобы узнать результат.</li>
+                    <li class="pravila">Если вы не угадали число, то снизу будет небольшая подсказка, если вы ввели число меньше, чем загаданное, то будет написано "Вы ввели маленькое число". 
+                        Если же вы ввели число больше, чем загаданное, то будет написано "Вы ввели слишком большое число.</li>
+                    <li class="pravila">Если вы выиграли, то на экране появится поздравление.</li>
+                    <li class="pravila">Для того чтобы сыграть еще, нажмите на соответсвующую кнопку.<div class=""></div></li>
+                </ol>
+              
+                
+            
         </div>
     </main>
     
