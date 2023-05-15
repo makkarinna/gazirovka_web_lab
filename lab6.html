@@ -63,6 +63,20 @@
             margin-top: 10px;
             box-shadow: 1px 2px;
         }
+        .clothes{
+            margin-top: 10px;
+            border: 1px solid;
+            border-radius: 3px 3px;
+            color: cornflowerblue;
+            border-color: cornflowerblue;
+            width: 25%;
+            background-color: white;
+        }
+        #wear {
+            width: 150px;
+            height: auto;
+            margin-top: 10px;
+        }
         
 
     </style>
@@ -165,6 +179,33 @@
             }
             block.style.width = width + 'px'
         }
+        function filter() {
+            let color = document.getElementById('wear-color').value;
+            let type = document.getElementById('wear-type').value;
+            let wear = document.getElementById('wear');
+
+            if(color == 'Красный' && type == 'Футболка') {
+                wear.src = 'https://brandpresent.ru/shop/project/1000/BP_1878.50_10_1000x1000.jpg'
+            } else if (color == 'Белый' && type == 'Футболка') {
+                wear.src = 'https://brandpresent.ru/shop/project/1000/BP_1878.60_25_1000x1000.jpg';
+            } else if (color == 'Черный' && type == 'Футболка') {
+                wear.src = 'https://brandpresent.ru/shop/project/1000/BP_1878.30_12_1000x1000.jpg';
+            } else if (color == 'Красный' && type == 'Поло') {
+                wear.src = 'https://st1.tsum.com/sig/f8fa5c24d27dfa713992858e6a4065e2/width/1526/i/67/e8/77/d5/67e877d5-6aed-3404-b666-fd581179e63b.jpg';
+            } else if (color == 'Белый' && type == 'Поло') {
+                wear.src = 'https://terpro.ru/wp-content/uploads/2020/12/Bel-zhen.png';
+            } else if (color == 'Черный' && type == 'Поло') {
+                wear.src = 'https://futbolka.ua/image/cache/catalog/product/promo/bc/pwi11/pwi11_002-auto_width_500.jpg';
+            } else if (color == 'Красный' && type == 'Майка') {
+                wear.src = 'https://crasava.ru/app/uploads/2020/06/11808165_1.tif_1000x1000.jpg';
+            } else if (color == 'Белый' && type == 'Майка') {
+                wear.src = 'https://www.aaa-gifts.ru/upload/resize_cache/iblock/5f0/600_600_11e533657e66d5cfbc8756587025a0796/5f065a4ebe561c93d981bbc3eaa2e624.jpg';
+            } else if (color == 'Черный' && type == 'Майка') {
+                wear.src = 'https://4kraski.ru/assets/images/products/32578/5970.30-1-tif-1000x1000.jpg';
+            } else {
+                wear.src = '';
+            }
+        }
 
     </script>
 </head>
@@ -232,6 +273,27 @@
         </div>
         <div class="rach" onclick="resizeBlock()">
             Расширь меня 
+        </div>
+
+        <div class='clothes'>
+            Цвет одежды:
+            <select id="wear-color")>
+                <option>Красный</option>
+                <option>Белый</option>
+                <option>Черный</option>
+            </select><br>
+
+            Тип одежды:
+            <select id="wear-type">
+                <option>Футболка</option>
+                <option>Поло</option>
+                <option>Майка</option>
+            </select><br>
+
+            <button onclick="filter()">OK</button>
+
+            <img id="wear">
+
         </div>
 
     </main>
