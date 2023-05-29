@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Махмад Карина Абдуловна. Лабораторная 7</title>
     <link rel="stylesheet" href="main.css">
+    <style>
+        .block {
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            margin-bottom: 10px;
+        }
+    </style>
     <script>
         function addBlocks() {
             let blocks = document.getElementById('blocks');
@@ -36,6 +44,20 @@
         let average = sum / exchange.length;
         document.getElementById('detail').innerHTML = 'Среднее значение: ' + average;
     }
+    function addTransparentBlock() {
+        let ransparent_blocks = document.getElementById("transparent-blocks");
+
+        for (let i = 0; i < 10; i++) {
+            let block = document.createElement('div');
+            block.innerHTML = 'Блок ' + (i+1);
+            block.style.opacity = i / 10;
+            ransparent_blocks.appendChild(block);
+  }
+}
+  
+
+
+
     </script>
 </head>
 <body>
@@ -50,6 +72,9 @@
         <button onclick="showExchange()">Курс доллара</button>
         <table border="1" id="dollar-exchange"></table>
         <div id="detail"></div>
+
+        <button onclick="addTransparentBlock()">Создать полупрозрачные блоки</button>
+        <div id="transparent-blocks"></div>
 
     </main>
 
