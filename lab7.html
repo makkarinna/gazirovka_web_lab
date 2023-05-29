@@ -35,13 +35,13 @@
         .purple {
             background-color: purple;
         }
-
-
-
+    
+       
     </style>
     <script>
         function addBlocks() {
             let blocks = document.getElementById('blocks');
+            blocks.innerHTML = '';
             for(let i = 0; i < 10; i++) {
                 let block = document.createElement('div');
                 block.innerHTML = 'Блок №' + (i+1) + ':' + (2 * i**2);
@@ -54,6 +54,7 @@
             let exchange = [70.5174, 70.1217, 70.0414, 70.3847, 70.5991, 
                             70.8924, 71.5763, 72.8949, 72.7923, 73.6307];
             let table = document.getElementById('dollar-exchange');
+            table.innerHTML = '';
             for(let i = 0; i < exchange.length; i++) {
                 let tr = document.createElement('tr');
                 let td = document.createElement('td');
@@ -71,6 +72,7 @@
     }
     function addTransparentBlock() {
         let ransparent_blocks = document.getElementById("transparent-blocks");
+        ransparent_blocks.innerHTML = '';
 
         for (let i = 0; i < 10; i++) {
             let block = document.createElement('div');
@@ -97,10 +99,44 @@
     }
     
     circlesContainer.appendChild(circle);
-  }
+    }
 }
+    function Tablesum() {
+       
+        let table = document.getElementById("multiplication-table");
+        table.innerHTML = '';
 
+        for (let i = 13; i <= 33; i++) {
+            let row = document.createElement('tr');
+            let multiplication = i * 50;
 
+            let cell1 = document.createElement('td');
+            cell1.innerText = i;
+
+            let cell2 = document.createElement('td');
+            cell2.innerText = '*';
+
+            let cell3 = document.createElement('td');
+            cell3.innerText = '50';
+
+            let cell4 = document.createElement('td');
+            cell4.innerText = '=';
+
+            let cell5 = document.createElement('td');
+            cell5.innerText = multiplication;
+
+            row.appendChild(cell1);
+            row.appendChild(cell2);
+            row.appendChild(cell3);
+            row.appendChild(cell4);
+            row.appendChild(cell5);
+
+            table.appendChild(row);
+
+   
+        }
+      
+    }
 
     </script>
 </head>
@@ -123,6 +159,10 @@
         <input type="number" id="circleCount" value="5" placeholder="Введите число кругов">
         <button onclick="createCircles()">Желтый/Фиолетовый</button>
         <div id="circlesContainer"></div>
+
+        <button onclick="Tablesum()">Таблица умножения</button>
+        <table id="multiplication-table"></table>
+       
     </main>
 
     <footer>
