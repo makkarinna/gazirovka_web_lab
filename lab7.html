@@ -137,6 +137,44 @@
         }
       
     }
+    function shwAkcii() {
+        let showPrice = [456, 464, 454, 452, 452, 
+                        456, 458, 437, 438];
+        let showData = ['16.05.2023', '17.05.2023', '18.05.2023', '19.05.2023', '22.05.2023',
+                        '23.05.2023', '24.05.2023', '25.05.2023', '26.05.2023'];
+        
+        let table = document.getElementById('shTbl');
+        for (let i = 0; i<showPrice.length; i++) {
+                let tr = document.createElement('tr');
+                let td = document.createElement('td');
+                let newtd = document.createElement('td');
+                let minustd = document.createElement('td');
+                td.innerHTML = showPrice[i]
+                newtd.innerHTML = showData[i]
+                minustd.innerHTML = (showPrice[i] - showPrice[i - 1]).toFixed(); 
+                tr.appendChild(newtd);
+                tr.appendChild(td);
+                tr.appendChild(minustd);
+                table.appendChild(tr)
+            
+            let sum = 0;
+                for(let i = 0; i < showPrice.length; i++) {
+                    sum = sum + showPrice [i];
+            }
+
+            let average = sum / showPrice.length;
+            document.getElementById('avrPrc').innerHTML = 'Среднее значение: ' + average.toFixed();
+
+            let Pricemax = Math.max(...showPrice)
+            let Pricemin = Math.min(...showPrice)
+            let max = document.getElementById('maxPrc')
+            let min = document.getElementById('minPrc')
+            max.innerHTML = 'Максимальное значение: ' + Pricemax
+            min.innerHTML = 'Минимальное значение: ' + Pricemin
+
+            }
+        }
+    
 
     </script>
 </head>
@@ -162,6 +200,12 @@
 
         <button onclick="Tablesum()">Таблица умножения</button>
         <table id="multiplication-table"></table>
+
+        <button onclick="shwAkcii()">Курс акций En+</button>
+        <table border="1" id="shTbl"></table>
+        <p id="avrPrc"></p>
+        <p id="maxPrc"></p>
+        <p id="minPrc"></p>
        
     </main>
 
