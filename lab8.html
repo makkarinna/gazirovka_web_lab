@@ -28,6 +28,29 @@
                 color: powderblue;
              
             }
+            button {
+                background-color: lavender;
+                border: none;
+                width: 200px;
+                height: 70px;
+                margin-top: 5px;
+                color:cadetblue;
+                font-weight: 600;
+                margin-left: 500px;
+                font-size: 17px;
+            }
+            .ro {
+                margin-left: 500px;
+                margin-top: 40px;
+                color: cadetblue;
+                font-size: 17px;
+                font-weight: 600;
+            }
+            #days {
+                color: cadetblue;
+                font-weight: 600;
+                margin-left: 500px;
+            }
 
     </style>
 </head>
@@ -45,6 +68,14 @@
             <div class="rt" id="current-date2"></div>
             <div class="rt" id="current-date3"></div>
             <div class="rt" id="current-date4"></div>
+        </div>
+        <div class="ro">
+            <label>Дата рождения: <input style="color: cadetblue; background-color: lavender; border: none; block-size: 30px;" type="date"></label>
+        </div>
+        <button onclick="showDaysCount()">Показать число дней</button>
+        <div id="days"></div>
+        <div>
+            <button onclick="Clear()">Очистить данные</button>
         </div>
     </main>
 
